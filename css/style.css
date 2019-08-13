@@ -688,6 +688,47 @@ pre {
 .offset-11 {
   margin-left: 91.66667%; }
 
+  .local-scroll-cont {
+  	width: 40px;
+  	height: 40px;
+  	position:absolute;
+  	bottom: 0;
+  	left: 50%;
+  	margin-left: -20px;
+  	text-align: center;
+  	z-index: 20;
+
+  	-webkit-animation: scroll-down-anim ease-in-out 1s infinite;
+    -moz-animation: scroll-down-anim ease-in-out 1s infinite;
+    -o-animation: scroll-down-anim ease-in-out 1s infinite;
+    animation: scroll-down-anim ease-in-out 1s infinite;
+  }
+  .scroll-down {
+    color: #323336;
+  	font-size: 32px;
+  }
+
+  @-webkit-keyframes scroll-down-anim {
+      0%{ -webkit-transform: translateY(-8px); transform: translateY(-8px); }
+      50%{ -webkit-transform: translateY(0px); transform: translateY(0px); }
+      100%{ -webkit-transform: translateY(-8px); transform: translateY(-8px); }
+  }
+  @-moz-keyframes scroll-down-anim {
+      0%{ -moz-transform: translateY(-8px); transform: translateY(-8px); }
+      50%{ -moz-transform: translateY(0px); transform: translateY(0px); }
+      100%{ -moz-transform: translateY(-8px); transform: translateY(-8px); }
+  }
+  @-o-keyframes scroll-down-anim {
+      0%{ -o-transform: translateY(-8px); transform: translateY(-8px); }
+      50%{ -o-transform: translateY(0px); transform: translateY(0px); }
+      100%{ -o-transform: translateY(-8px); transform: translateY(-8px); }
+  }
+  @keyframes scroll-down-anim {
+      0%{ transform: translateY(-8px); }
+      50%{ transform: translateY(0px); }
+      100%{ transform: translateY(-8px); }
+  }
+
 @media (min-width: 576px) {
   .col-sm {
     -ms-flex-preferred-size: 0;
@@ -7004,6 +7045,11 @@ button.bg-dark:focus {
   .ml-sm-auto,
   .mx-sm-auto {
     margin-left: auto !important; } }
+
+    #top-green{
+      visibility: hidden;
+      height: 0px;
+    }
 
 @media (min-width: 768px) {
   .m-md-0 {
